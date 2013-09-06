@@ -60,13 +60,13 @@ class HelloWorldApi(remote.Service):
                                         required=True))
 
     @endpoints.method(MULTIPLY_METHOD_RESOURCE, Greeting,
-                      path='greeting/{times}', http_method='POST',
+                      path='hellogreeting/{times}', http_method='POST',
                       name='greetings.multiply')
     def greetings_multiply(self, request):
         return Greeting(message=request.message * request.times)
 
     @endpoints.method(message_types.VoidMessage, GreetingCollection,
-                      path='greeting', http_method='GET',
+                      path='hellogreeting', http_method='GET',
                       name='greetings.listGreeting')
     def greetings_list(self, unused_request):
         return STORED_GREETINGS
@@ -76,7 +76,7 @@ class HelloWorldApi(remote.Service):
             id=messages.IntegerField(1, variant=messages.Variant.INT32))
 
     @endpoints.method(ID_RESOURCE, Greeting,
-                      path='greeting/{id}', http_method='GET',
+                      path='hellogreeting/{id}', http_method='GET',
                       name='greetings.getGreeting')
     def greeting_get(self, request):
         try:
@@ -86,7 +86,7 @@ class HelloWorldApi(remote.Service):
                                               (request.id,))
 
     @endpoints.method(message_types.VoidMessage, Greeting,
-                      path='greeting/authed', http_method='POST',
+                      path='hellogreeting/authed', http_method='POST',
                       name='greetings.authed')
     def greeting_authed(self, request):
         current_user = endpoints.get_current_user()
