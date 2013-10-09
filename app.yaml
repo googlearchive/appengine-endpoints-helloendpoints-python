@@ -5,6 +5,13 @@ threadsafe: true
 api_version: 1
 
 handlers:
+- url: /js
+  static_dir: static/js
+- url: /bootstrap
+  static_dir: static/bootstrap
+- url: /
+  static_files: templates/index.html
+  upload: templates/index\.html
 # Endpoints handler
 - url: /_ah/spi/.*
   script: helloworld_api.APPLICATION
@@ -12,3 +19,5 @@ handlers:
 libraries:
 - name: pycrypto
   version: latest
+- name: endpoints
+  version: 1.0
