@@ -1,6 +1,4 @@
-#!/usr/bin/python
-
-# Copyright (C) 2010-2013 Google Inc.
+# Copyright (C) 2013 Google Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -21,13 +19,16 @@ as well as those methods defined in an API.
 """
 
 
-from google.appengine.ext import endpoints
+import endpoints
 from protorpc import messages
 from protorpc import message_types
 from protorpc import remote
 
 
-CLIENT_ID = 'YOUR-CLIENT-ID'
+WEB_CLIENT_ID = 'replace this with your web client application ID'
+ANDROID_CLIENT_ID = 'replace this with your Android client ID'
+IOS_CLIENT_ID = 'replace this with your iOS client ID'
+ANDROID_AUDIENCE = WEB_CLIENT_ID
 
 
 package = 'Hello'
@@ -50,7 +51,9 @@ STORED_GREETINGS = GreetingCollection(items=[
 
 
 @endpoints.api(name='helloworld', version='v1',
-               allowed_client_ids=[CLIENT_ID, endpoints.API_EXPLORER_CLIENT_ID])
+               allowed_client_ids=[WEB_CLIENT_ID, ANDROID_CLIENT_ID,
+                                   IOS_CLIENT_ID],
+               audiences=[ANDROID_AUDIENCE])
 class HelloWorldApi(remote.Service):
     """Helloworld API v1."""
 
@@ -95,5 +98,4 @@ class HelloWorldApi(remote.Service):
         return Greeting(message='hello %s' % (email,))
 
 
-APPLICATION = endpoints.api_server([HelloWorldApi],
-                                   restricted=False)
+APPLICATION = endpoints.api_server([HelloWorldApi])
