@@ -25,12 +25,8 @@ A "Hello World" application for Google Cloud Endpoints in Python.
  [console][6].
 1. Run the application, and ensure it's running by visiting your local server's
    admin console (by default http://localhost:8000.)
-1. Test your Endpoints by visiting the Google APIs Explorer:
-   http://localhost:8080/_ah/api/explorer
-1. [Get the client library][5] with `endpointscfg.py` by running:
-
-        endpointscfg.py get_client_lib java -o . \
-          helloworld_api.HelloWorldApi
+1. Test your Endpoints by visiting the Google APIs Explorer (by default http://localhost:8000/_ah/api/explorer)
+1. [Get the client library][5] with `endpointscfg.py` by running: `endpointscfg.py get_client_lib java -o . helloworld_api.HelloWorldApi`
 
 
 [1]: https://developers.google.com/appengine
