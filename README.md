@@ -21,7 +21,7 @@ A "Hello World" application for Google Cloud Endpoints in Python.
      1. Update the values in `helloworld_api.py` to
  reflect the respective client IDs you have registered in the [console][6].
      1. Update the value of `google.devrel.samples.helloendpoints.CLIENT_ID` in
- `js/base.js` to reflect the web client ID you have registered in the
+ `static/js/base.js` to reflect the web client ID you have registered in the
  [console][6].
 1. Run the application, and ensure it's running by visiting your local server's
    admin console (by default http://localhost:8000.)
@@ -29,7 +29,7 @@ A "Hello World" application for Google Cloud Endpoints in Python.
    http://localhost:8080/_ah/api/explorer
 1. [Get the client library][5] with `endpointscfg.py` by running:
 
-        endpointscfg.py get_client_lib java -o . -f rest \ 
+        endpointscfg.py get_client_lib java -o . \
           helloworld_api.HelloWorldApi
 
 
