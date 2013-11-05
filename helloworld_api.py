@@ -25,6 +25,8 @@ from protorpc import message_types
 from protorpc import remote
 
 
+# TODO: Replace the following lines with client IDs obtained from the APIs
+# Console or Cloud Console.
 WEB_CLIENT_ID = 'replace this with your web client application ID'
 ANDROID_CLIENT_ID = 'replace this with your Android client ID'
 IOS_CLIENT_ID = 'replace this with your iOS client ID'
