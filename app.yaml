@@ -12,7 +12,7 @@ runtime: python27
 threadsafe: true
 api_version: 1
 
-# Handlers tell app engine how to route requests to your application.
+# Handlers tell App Engine how to route requests to your application.
 handlers:
 
 # The following three handlers route requests to static resources: JS, CSS,
@@ -37,13 +37,16 @@ handlers:
 # of the App Engine SDK don't need to be listed here, instead add them to your
 # project directory, either as a git submodule or as a plain subdirectory.
 # Note that dependencies must be located in your project directory - packages
-# installed in the Python environment are not loaded by the App Engine development
-# server or deployment tools.
+# installed in the Python environment are not loaded by the App Engine
+# development server or deployment tools.
 # TODO: List any other App Engine SDK libs you may need here.
 libraries:
-- name: pycrypto
-  version: latest
 
 # You must include the Endpoints library if you wish to serve an API.
 - name: endpoints
   version: 1.0
+
+# The pycrypto library is used for OAuth 2, and is also a requirement for
+# APIs that wish to authenticate users.
+- name: pycrypto
+  version: latest
