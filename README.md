@@ -32,7 +32,7 @@ To deploy the application:
  1. Optional step: These sub steps are not required but will enable the "Authenticated
  Greeting" functionality.
      1. Update the values in `helloworld_api.py` to
- reflect the respective client IDs you have registered in the [console][6].
+ reflect the respective client IDs you have registered in the [console][3].
      1. Update the value of `google.devrel.samples.helloendpoints.CLIENT_ID` in
  `static/js/base.js` to reflect the web client ID you have registered in the
  [console][3].
