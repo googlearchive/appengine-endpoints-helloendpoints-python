@@ -44,7 +44,7 @@ To deploy the application:
    ```
    or use the App Engine Launcher.
 
-1. [Get the client library][2] with
+1. [Get the Android client library][2] with
 
    ```
    endpointscfg.py get_client_lib java -o . helloworld_api.HelloWorldApi
