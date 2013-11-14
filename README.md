@@ -14,15 +14,15 @@ See the README file for directions.
 1. Clone this repo with
 
    ```
-   git clone <project URL>
+   git clone https://github.com/GoogleCloudPlatform/appengine-endpoints-helloendpoints-python
    ```
 1. Run the application locally with
 
    ```
-   cd <project_directory>
+   cd appengine-endpoints-helloendpoints-python
    dev_appserver.py .
    ```
-1. Test your Endpoints by visiting the Google APIs Explorer (by default http://localhost:8000/_ah/api/explorer)
+1. Test your Endpoints by visiting the Google APIs Explorer (by default [http://localhost:8000/_ah/api/explorer](http://localhost:8000/_ah/api/explorer))
 
 ## Deploy
 To deploy the application:
@@ -43,12 +43,12 @@ To deploy the application:
    appcfg.py --oauth2 update .
    ```
    or use the App Engine Launcher.
-
-1. [Get the Android client library][2] with
+1. [Generate the Android client library][2] with:
 
    ```
    endpointscfg.py get_client_lib java -o . helloworld_api.HelloWorldApi
    ```
+   The library will connect to your deployed application. If you change your app ID, you must regenerate the client library.
 
 ## Next Steps
 This skeleton includes TODO markers you can search for to determine some of the
@@ -79,4 +79,4 @@ See [LICENSE](LICENSE)
 
 [1]: https://developers.google.com/appengine/docs/python/endpoints/
 [2]: https://developers.google.com/appengine/docs/python/endpoints/gen_clients
-[3]: https://developers.google.com/console
+[3]: https://cloud.google.com/console
