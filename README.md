@@ -9,7 +9,7 @@ scaffolding for other Python frameworks and use cases.
 
 ## Run Locally
 1. Install the [App Engine Python SDK](https://developers.google.com/appengine/downloads).
-See the README file for directions.
+See the README file for directions. You'll need Python 2.7 installed too.
 
 1. Clone this repo with
 
