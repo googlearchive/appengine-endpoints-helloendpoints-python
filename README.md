@@ -14,7 +14,7 @@ See the README file for directions.
 1. Clone this repo with
 
    ```
-   git clone https://github.com/GoogleCloudPlatform/appengine-endpoints-helloendpoints-python
+   git clone https://github.com/GoogleCloudPlatform/appengine-endpoints-helloendpoints-python.git
    ```
 1. Run the application locally with
 
