@@ -37,12 +37,13 @@ To deploy the application:
  `static/js/base.js` to reflect the web client ID you have registered in the
  [console][3].
 1. [Deploy the application](https://developers.google.com/appengine/docs/python/tools/uploadinganapp)
-   with
+   with:
 
    ```
    appcfg.py --oauth2 update .
    ```
    or use the App Engine Launcher.
+1. Congratulations! Your application is now live at `your-app-id`.appspot.com.
 1. [Generate the Android client library][2] with:
 
    ```
