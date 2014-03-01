@@ -18,7 +18,7 @@
         form {
             margin-top: 10px;
         }
-        form span {
+        form label {
           width: 90px;
           display: inline-block;
         }
@@ -57,7 +57,7 @@
 
     <form onsubmit="return false">
         <h2>Get Greeting</h2>
-        <div><span>Greeting ID: </span><input id="id" /></div>
+        <div><label for="id">Greeting ID:</label><input id="id" /></div>
         <div><input id="getGreeting" type="submit" class="btn btn-small" value="Submit"></div>
     </form>
     
@@ -68,8 +68,8 @@
     
     <form onsubmit="return false">
         <h2>Multiply Greetings</h2>
-        <div><span>Greeting: </span><input id="greeting" /></div>
-        <div><span>Count: </span><input id="count" /></div>
+        <div><label for="greeting">Greeting:</label><input id="greeting" /></div>
+        <div><label for="count">Count:</label><input id="count" /></div>
         <div><input id="multiplyGreetings" type="submit" class="btn btn-small" value="Submit"></div>
     </form>
     
