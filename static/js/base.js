@@ -45,8 +45,8 @@ google.devrel.samples.hello.userAuthed = function() {
   var request = gapi.client.oauth2.userinfo.get().execute(function(resp) {
     if (!resp.code) {
       google.devrel.samples.hello.signedIn = true;
-      document.getElementById('signinButton').innerHTML = 'Sign out';
-      document.getElementById('authedGreeting').disabled = false;
+      document.querySelector('#signinButton').textContent = 'Sign out';
+      document.querySelector('#authedGreeting').disabled = false;
     }
   });
 };
@@ -71,8 +71,8 @@ google.devrel.samples.hello.auth = function() {
         google.devrel.samples.hello.userAuthed);
   } else {
     google.devrel.samples.hello.signedIn = false;
-    document.getElementById('signinButton').innerHTML = 'Sign in';
-    document.getElementById('authedGreeting').disabled = true;
+    document.querySelector('#signinButton').textContent = 'Sign in';
+    document.querySelector('#authedGreeting').disabled = true;
   }
 };
 
@@ -84,7 +84,7 @@ google.devrel.samples.hello.print = function(greeting) {
   var element = document.createElement('div');
   element.classList.add('row');
   element.innerHTML = greeting.message;
-  document.getElementById('outputLog').appendChild(element);
+  document.querySelector('#outputLog').appendChild(element);
 };
 
 /**
@@ -146,28 +146,29 @@ google.devrel.samples.hello.authedGreeting = function(id) {
  * Enables the button callbacks in the UI.
  */
 google.devrel.samples.hello.enableButtons = function() {
-  document.getElementById('getGreeting').onclick = function() {
+  var getGreeting = document.querySelector('#getGreeting');
+  getGreeting.addEventListener('click', function(e) {
     google.devrel.samples.hello.getGreeting(
-        document.getElementById('id').value);
-  }
+        document.querySelector('#id').value);
+  });
 
-  document.getElementById('listGreeting').onclick = function() {
-    google.devrel.samples.hello.listGreeting();
-  }
+  var listGreeting = document.querySelector('#listGreeting');
+  listGreeting.addEventListener('click',
+      google.devrel.samples.hello.listGreeting);
 
-  document.getElementById('multiplyGreetings').onclick = function() {
+  var multiplyGreetings = document.querySelector('#multiplyGreetings');
+  multiplyGreetings.addEventListener('click', function(e) {
     google.devrel.samples.hello.multiplyGreeting(
-        document.getElementById('greeting').value,
-        document.getElementById('count').value);
-  }
+        document.querySelector('#greeting').value,
+        document.querySelector('#count').value);
+  });
 
-  document.getElementById('authedGreeting').onclick = function() {
-    google.devrel.samples.hello.authedGreeting();
-  }
-  
-  document.getElementById('signinButton').onclick = function() {
-    google.devrel.samples.hello.auth();
-  }
+  var authedGreeting = document.querySelector('#authedGreeting');
+  authedGreeting.addEventListener('click',
+      google.devrel.samples.hello.authedGreeting);
+
+  var signinButton = document.querySelector('#signinButton');
+  signinButton.addEventListener('click', google.devrel.samples.hello.auth);
 };
 
 /**

@@ -2,10 +2,10 @@
 <html>
 <head>
     <title>Hello Endpoints!</title>
-    <script type="text/javascript" src="/js/base.js"></script>
-    <link type="text/css" rel="stylesheet" href="/bootstrap/css/bootstrap.css" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
-    <style type="text/css">
+    <script async src="/js/base.js"></script>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap-responsive.css">
+    <style>
         body {
             padding-top: 40px;
             padding-bottom: 40px;
@@ -17,6 +17,10 @@
         }
         form {
             margin-top: 10px;
+        }
+        form span {
+          width: 90px;
+          display: inline-block;
         }
         .form-signin input[type="text"] {
             font-size: 16px;
@@ -49,32 +53,32 @@
 </div>
 <div class="container">
 
-    <div id="outputLog"></div>
+    <output id="outputLog"></output>
 
-    <form action="javascript:void(0);">
+    <form onsubmit="return false">
         <h2>Get Greeting</h2>
-        <div><span style="width: 90px; display: inline-block;">Greeting ID: </span><input id="id" /></div>
+        <div><span>Greeting ID: </span><input id="id" /></div>
         <div><input id="getGreeting" type="submit" class="btn btn-small" value="Submit"></div>
     </form>
     
-    <form action="javascript:void(0);">
+    <form onsubmit="return false">
         <h2>List Greetings</h2>
         <div><input id="listGreeting" type="submit" class="btn btn-small" value="Submit"></div>
     </form>
     
-    <form action="javascript:void(0);">
+    <form onsubmit="return false">
         <h2>Multiply Greetings</h2>
-        <div><span style="width: 90px; display: inline-block;">Greeting: </span><input id="greeting" /></div>
-        <div><span style="width: 90px; display: inline-block;">Count: </span><input id="count" /></div>
+        <div><span>Greeting: </span><input id="greeting" /></div>
+        <div><span>Count: </span><input id="count" /></div>
         <div><input id="multiplyGreetings" type="submit" class="btn btn-small" value="Submit"></div>
     </form>
     
-    <form action="javascript:void(0);">
+    <form onsubmit="return false">
         <h2>Authenticated Greeting</h2>
         <div><input id="authedGreeting" type="submit" class="btn btn-small" disabled value="Submit"></div>
     </form>
 
-    <script type="text/javascript">
+    <script>
         function init() {
             google.devrel.samples.hello.init('//' + window.location.host + '/_ah/api');
         }
