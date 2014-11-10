@@ -22,7 +22,7 @@ See the README file for directions. You'll need Python 2.7 installed too.
    cd appengine-endpoints-helloendpoints-python
    dev_appserver.py .
    ```
-1. Test your Endpoints by visiting the Google APIs Explorer (by default [http://localhost:8000/_ah/api/explorer](http://localhost:8000/_ah/api/explorer))
+1. Test your Endpoints by visiting the Google APIs Explorer (by default [http://localhost:8080/_ah/api/explorer](http://localhost:8080/_ah/api/explorer))
 
 ## Deploy
 To deploy the application:
