@@ -49,6 +49,11 @@ To deploy the application:
    ```
    endpointscfg.py get_client_lib java -o . helloworld_api.HelloWorldApi
    ```
+   
+   or for Gradle projects:
+   ```   
+   endpointscfg.py get_client_lib java -bs gradle -o . helloworld_api.HelloWorldApi
+   ```
    The library will connect to your deployed application. If you change your app ID, you must regenerate the client library.
 
 ## Next Steps
