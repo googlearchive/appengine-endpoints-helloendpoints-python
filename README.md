@@ -1,3 +1,7 @@
+![status: inactive](https://img.shields.io/badge/status-inactive-red.svg)
+
+This sample has been moved to [GoogleCloudPlatform/python-docs-samples](https://github.com/GoogleCloudPlatform/python-docs-samples).
+
 ## Hello Endpoints Python
 
 A Python "Hello World" skeleton application for Google App Engine using
